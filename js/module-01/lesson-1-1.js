@@ -45,3 +45,33 @@
 // console.log(Math.ceil(0.1 + 0.2));
 // console.log(Math.floor(0.1 + 0.2));
 // console.log(Math.round(0.1 + 0.5));
+
+// const str1 = 'hello';
+// const str2 = 'world';
+// console.log(str1 + ' ' + str2);
+
+// console.log(`${str1} ${str2}`);
+
+// const userName = 'mango' ;
+// const age = 30;
+// function getAge(){return age}
+// console.log(`Hello my name ${userName} and my age ${getAge()} `);
+
+// const number = 15;
+// console.log(String(number));
+// console.log(number + '');
+// console.log(number.toString());
+// console.log(`${number}`);
+
+// console.log(Math.floor(3.1)); 
+// console.log(Math.ceil(3.001)); 
+// console.log(Math.round(3.5));
+// console.log((12345.6459).toFixed(1));
+// console.log(Math.max(20, 10, 50, 40)); 
+// console.log(Math.min(20, 10, 40, 94, -4)); 
+// console.log(Math.pow(2, 3));
+// console.log(2 ** 64);
+// console.log(Math.random() * 100);
+// console.log(Math.round(Math.random() * (10-1) + 1));
+console.log(Math.sqrt(8));
+console.log(Math.cbrt(8));
