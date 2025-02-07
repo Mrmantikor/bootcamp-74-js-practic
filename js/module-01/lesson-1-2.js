@@ -55,3 +55,30 @@
 //console.log(Number.parseFloat(string))
 
 //console.log(3 > 2 > 1);
+
+// console.log(Math.PI);
+// console.log(Math.pow(2, 5));
+// console.log(Math.min(32, 4234, 23, 1, 0));
+// console.log(Math.max(32, 4234, 23, 1, 0));
+// console.log(Math.abs(-2));
+// console.log(Math.abs(0));
+// console.log(Math.abs(NaN));
+// console.log(Math.abs('20'));
+// console.log(Math.abs("asdsf"));
+
+// function showName() {
+//    console.log('Mango');
+// }
+
+// showName();
+
+// const showName = function (name, age) {
+//   return `${name} is ${age} years old`;
+// };
+// console.log(showName("mango", 29));
+
+function showMinNumber(num1, num2, num3, num4) {
+  return Math.min(num1, num2, num3, num4);
+}
+
+console.log(showMinNumber(23, 56, 78));
