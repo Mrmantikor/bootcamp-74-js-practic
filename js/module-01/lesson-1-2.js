@@ -77,8 +77,39 @@
 // };
 // console.log(showName("mango", 29));
 
-function showMinNumber(num1, num2, num3, num4) {
-  return Math.min(num1, num2, num3, num4);
-}
+// function showMinNumber(num1, num2, num3, num4) {
+//   return Math.min(num1, num2, num3, num4);
+// }
 
-console.log(showMinNumber(23, 56, 78));
+// console.log(showMinNumber(23, 56, 78));
+// Оголоси дві змінні, які зберігають назву та ціну товару: productName і price. Присвоїти змінним наступні характеристики товару (відразу при оголошенні) назва: MacBook Pro 13″, ціна: 10000.
+    
+// Напиши функцію, яка буде виводити повідомлення - 'Обрано «MacBook Pro 13″», ціна за штуку 10000 кредитів'.
+
+// Напиши функцію, яка буде перевизначати обраному товару, нову ціну. Функція повинна повертати повідомлення - 'Ціна змінена «MacBook Pro 13», нова ціна за штуку «new price» кредитів'.
+
+// const productName = `MacBook Pro 13`;
+// const price = 10000;
+
+// function showProduct(productName, price) {
+//   return `Обрано ${productName}, ціна за штуку ${price} кредитів`;
+
+// }
+// const message = showProduct(productName, price);
+// console.log(message);
+
+// const newPrice = function (productName, price) {
+//   return `Ціна змінена «${productName}», нова ціна за штуку «${price} кредитів`;
+// }
+// console.log(newPrice(productName, 5000));
+
+
+// ? Напиши функцію, яка буде перевіряти пароль у користувача. Запроси пароль у користувача через promt
+
+// const userPassword = 'admin';
+// const pass = prompt(`Enter your pass:`);
+// function checkPass(pass) {
+//   return pass === userPassword;
+// }
+// const isChecked = checkPass(pass);
+// console.log(isChecked);

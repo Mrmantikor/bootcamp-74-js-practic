@@ -73,5 +73,5 @@
 // console.log(2 ** 64);
 // console.log(Math.random() * 100);
 // console.log(Math.round(Math.random() * (10-1) + 1));
-console.log(Math.sqrt(8));
-console.log(Math.cbrt(8));
+// console.log(Math.sqrt(8));
+// console.log(Math.cbrt(8));
