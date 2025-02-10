@@ -27,3 +27,28 @@
 // console.log("" + 1);
 // console.log(3 > 2 > 1);
 // console.log(3 > 2 && 2 > 1);
+////////////////////////////////////////////////////////////////
+
+// const str = 'abcdea';
+// if (str.indexOf("a") === 0) {
+//     console.log("так");
+// }
+// else{
+//     console.log("ні");
+// }
+// 4 variant
+// const message = str[0]==="a" ? "так":"Hi";
+// console.log(message);
+// 3 variant
+// const message = str.startsWith("a") ? "так":"Hi";
+// console.log(message);
+
+// 2 variant
+// str.startsWith("a") ? console.log("так") : console.log("ні");
+// 1 variant
+// if (str.startsWith("a")){
+//     console.log("так");
+// }
+// else {
+//     console.log("ні");
+// }
