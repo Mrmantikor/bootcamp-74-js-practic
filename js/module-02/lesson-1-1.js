@@ -52,3 +52,29 @@
 // else {
 //     console.log("ні");
 // }
+
+// Якщо ваше ім’я містить більше 4 букв і прізвище більше 5, то виведіть на екран число, яке дорівнює сумі букв імені і прізвища.
+// Якщо умова не виконується - вивести “неможливо виконати умову”.
+// Наприклад: “Віктор Сташко” Віктор - 6 літер, Сташко - 6 літер. Виводимо 12.
+// Використовувати вбудований метод length.
+
+const firstName = "Bobys";
+const lastName = "Marleys";
+// if (firstName.length > 4 && lastName.length > 5) {
+//    console.log(firstName.length + lastName.length)
+// }
+// else {
+//     console.log('неможливо виконати умову')
+//     }
+// const resolt =
+//   firstName.length > 4 && lastName.length > 5
+//     ? firstName.length + lastName.length
+//     : "неможливо виконати умову";
+// console.log(resolt);
+function checkNameLength(firstName, lastName) {
+  return firstName.length > 4 && lastName.length > 5
+    ? firstName.length + lastName.length
+    : "неможливо виконати умову";
+}
+const resolt = checkNameLength(firstName, lastName);
+console.log(resolt);
