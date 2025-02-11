@@ -69,7 +69,6 @@
 // }
 //  console.log(isPalindrom(str));
 
-
 // Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чино
 // *
 // **
@@ -95,18 +94,63 @@
 // }
 
 // Порахуйте суму чисел від 12 до 27
-const num1 = 12;
-const num2 = 27;
-let sum=0;
-// for(let i=num1; i<num2; i++){
-//   if (i%2!==0){
-//     sum+=i;
+// const num1 = 12;
+// const num2 = 27;
+// let sum = 0;
+// // for(let i=num1; i<num2; i++){
+// //   if (i%2!==0){
+// //     sum+=i;
+// //   }
+// // }
+// for (let i = num1; i < num2; i++) {
+//   if (i % 2 === 0) {
+//     continue;
 //   }
+//   sum += i;
 // }
-for(let i=num1; i<num2; i++){
-  if (i%2===0){
-    continue;
-  }
-  sum+=i;
-}
-console.log(sum);
+// console.log(sum);
+
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+// let drink = prompt("Що бажаєте?")?.toLowerCase();
+// // if (typeof drink === "string") {
+// //   drink = drink.toLowerCase();
+// // }
+
+// let price = 0;
+
+// switch (drink) {
+//   case "кава":
+//     price = 1;
+//     break;
+//   case "чай":
+//     price = 2;
+//     break;
+//   case "сік":
+//     price = 3;
+//     break;
+//   default:
+//     "Що це?";
+// }
+// console.log(price);
+
+/*
+Опис:
+Тіммі та Сара думають, що вони закохані, але в тому місці, де вони живуть, вони дізнаються лише тоді, коли зірвуть по одній квітці. Якщо одна з квіток має парну кількість пелюсток, а інша - непарну, то це означає, що вони закохані.
+
+Напишіть функцію, яка отримує кількість пелюсток кожної квітки і повертає true, якщо вони закохані, і false, якщо ні.
+*/
+
+// function checkLove(flower1, flower2) {
+//   // if (
+//   //   (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+//   //   (flower1 % 2 !== 0 && flower2 % 2 === 0)
+//   // ) {
+//   //   return true;
+//   // }
+//   // return false;
+//   return flower1 % 2 !== flower2 % 2;
+// }
+
+// console.log(checkLove(2, 3));
