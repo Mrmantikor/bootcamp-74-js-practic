@@ -18,7 +18,39 @@
 
 // ?  У нас є рядок: 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?'.
 // ? Замініть усі входження dog на monkey.
-const str =
-  "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?";
-console.log(str.replace("The", "On"));
-console.log(str.replaceAll("dog", "monkey"));
+// const str =
+//   "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?";
+// console.log(str.replace("The", "On"));
+// console.log(str.replaceAll("dog", "monkey"));
+
+/*Потрібно перевітири чи є речення палінром*/
+
+ const str = 'Я несу гусеня!';
+//янесугусеня
+// const str = 'Де помити мопед';
+// const str = 'І була пані на палубІ';
+// const str = 'Поліна неси Ром!';
+
+// function isPalindrom(string){
+//   const newStr = string.replaceAll(" ", "").toLowerCase();
+//   let reversedString = "";
+//   for (let i=0; i<newStr.length; i++){
+//     reversedString += newStr[newStr.length-1-i];
+//   }
+//   console.log(newStr);
+//   console.log(reversedString);
+//   return newStr === reversedString;
+// }
+//  console.log(isPalindrom(str));
+
+function isPalindrom(string){
+  const newStr = string.replaceAll(" ", "").toLowerCase();
+  let reversedString = "";
+  for (let i=newStr.length-1; i>=0; i--){
+    reversedString += newStr[i];
+  }
+  console.log(newStr);
+  console.log(reversedString);
+  return newStr === reversedString;
+}
+ console.log(isPalindrom(str));
