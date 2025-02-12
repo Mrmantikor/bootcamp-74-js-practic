@@ -67,19 +67,43 @@ for (let i = 1700; i <= 2025; i++) {
 */
 // const userLogin = prompt("Enter login!");
 
-const userLogin = prompt("Enter login!");
-let strAdmin = "Адмін";
-if (userLogin === strAdmin) {
-  const userPassword = prompt("Enter your password");
-  if (userPassword === "Я головний") {
-    console.log("Здрастуйте!");
-  } else if (userLogin === null || userLogin === "") {
-    console.log("Скасовано");
-  } else {
-    console.log("Невірний пароль!");
-  }
-} else if (userLogin === null || userLogin === "") {
-  console.log("Скасовано");
-} else {
-  console.log("Я вас не знаю");
-}
+// const userLogin = prompt("Enter login!");
+// let strAdmin = "Адмін";
+// if (userLogin === strAdmin) {
+//   const userPassword = prompt("Enter your password");
+//   if (userPassword === "Я головний") {
+//     console.log("Здрастуйте!");
+//   } else if (userLogin === null || userLogin === "") {
+//     console.log("Скасовано");
+//   } else {
+//     console.log("Невірний пароль!");
+//   }
+// } else if (userLogin === null || userLogin === "") {
+//   console.log("Скасовано");
+// } else {
+//   console.log("Я вас не знаю");
+// }
+
+/*
+Дано ціле число. Виведіть в консоль фігуру, довжина і ширина якої дорівнює цьому числу. Число буде цілим числом від 0 до 50.
+
+Приклад: Ціле число = 3; Потрібно вивести в консоль квадрат 3x3 у вигляді рядка, як показано нижче.
+
+Розв'язок:
+
++++
++++
++++
+*/
+// function generateSquare(number) {
+//   let str = "";
+//   for (let i = 0; i < number; i++) {
+//     str += "+".repeat(number);
+//     if (i !== number - 1) {
+//       str += "\n";
+//     }
+//   }
+//   console.log(str);
+// }
+// generateSquare(3);
+// console.log(`${"+".repeat(3)}\n${"+".repeat(3)}\n${"+".repeat(3)}`);
