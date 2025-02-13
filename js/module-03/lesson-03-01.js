@@ -78,8 +78,48 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 
 // Порахуй кількість слів у рядку, використовуючи методи масивів і створи новий рядок, роділений дефісами у нижньому регістрі.
 
-const message = 'JavaScript is a popular programming language.';
-const newMessage = message.split(' ').join('-').toLowerCase();
-console.log(newMessage);
-const arrayLength = message.split(' ').length;
-console.log(arrayLength);
+// const message = 'JavaScript is a popular programming language.';
+// const newMessage = message.split(' ').join('-').toLowerCase();
+// console.log(newMessage);
+// const arrayLength = message.split(' ').length;
+// console.log(arrayLength);
+
+//Напишіть скрипт, який замінює регістр кожного символу
+//в стороні на протилежний
+//Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
+
+// const str = 'JavaScript'
+// let updateString = ''
+
+// for (let i = 0; i < str.length; i++) {
+// 	if (str[i] === str[i].toUpperCase()) {
+// 		updateString += str[i].toLowerCase()
+// 	} else {
+// 		updateString += str[i].toUpperCase()
+// 	}
+// }
+// console.log(updateString)
+
+// const array = str.split('')
+// const updateArray = []
+// for (let i = 0; i < array.length; i++) {
+// 	if (array[i] === array[i].toUpperCase()) {
+// 		updateArray.push(array[i].toLowerCase())
+// 	} else {
+// 		updateArray.push(array[i].toUpperCase())
+// 	}
+// }
+// console.log(updateArray.join(''))
+
+// Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+// const wordsArray = ['JavaScript', 'HTML', 'CSS', 'React']
+// const substring = 'S'
+// const array = []
+
+// for (const str of wordsArray) {
+// 	if (str.includes(substring)) {
+// 		array.push(str)
+// 	}
+// }
+// console.log(array)
