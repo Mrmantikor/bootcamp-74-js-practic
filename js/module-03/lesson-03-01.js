@@ -123,3 +123,47 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 // 	}
 // }
 // console.log(array)
+
+//Напишіть функцію, яка розіб'є рядок на масив
+//по 2 букви, якщо в останньої букви немає пари, то
+//повинна записатися 1 буква.
+//Дана рядок 'abc' - поверне ['ab', 'c'].
+
+//*якщо в останньої літери немає пари, поверне _
+//рядок 'abc' - поверне ['ab', 'c_']
+//
+// function getLetters (str){
+//     const array = [];
+//     for (let i = 0; i<str.length; i+=2){
+//         console.log('first letter', str[i]);
+//         console.log('second letter', str[i+1] || '_');
+//         array.push(str[1] + (str[i+1] || '_'));
+//     }
+//  return array;
+// }
+//
+// console.log(getLetters ('abc'))
+
+// Створи 2 масиви чисел. Обьеднай їх за допомогою методу масиву.
+// Створи нові масив і за допомогою циклу for або for..of,
+// в перший масив збери усі парні числи, а в другій усі не парні і виведи їх в консоль.
+
+
+// const firstArray = [1, 2, 3, 5, 4];
+// const secondArray = [10, 21, 33, 55, 44];
+//
+// const newArray = firstArray.concat(secondArray);
+// const evenNumbers = [];
+// const oddNumbers = [];
+//
+// for (const element of newArray){
+//     if (element % 2 ===0){
+//         evenNumbers.push(element);
+//     }
+//     else{
+//         oddNumbers.push(element);
+//     }
+// }
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+
