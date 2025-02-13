@@ -39,15 +39,47 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 // }
 
 // option 2
-function multiples(m, n) {
-  const arr = [];
+// function multiples(m, n) {
+//   const arr = [];
 
-  for (let i = 1; i <= m; i += 1) {
-    arr.push(n * i);
-  }
+//   for (let i = 1; i <= m; i += 1) {
+//     arr.push(n * i);
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
-// multiples(3, 5);
-console.log(multiples(4, 4));
+// // multiples(3, 5);
+// console.log(multiples(4, 4));
+
+//Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку за допомогою циклу for і for..of.
+
+// const str = "HTML, JavaScript, CSS, React";
+// const array = str.split(",");
+// console.log(array);
+
+// for (let index = 0; index < array.length; index++) {
+//   const word = array[index];
+//   console.log(word);
+// }
+
+// for (const element of array) {
+//   console.log(element);
+// }
+// let longestWord = array[0];
+
+// for (let index = 1; index < array.length; index++) {
+//   const word = array[index];
+//   if (longestWord.length < array[index].length) {
+//     longestWord = array[index];
+//   }
+// }
+// console.log(longestWord);
+
+// Порахуй кількість слів у рядку, використовуючи методи масивів і створи новий рядок, роділений дефісами у нижньому регістрі.
+
+const message = 'JavaScript is a popular programming language.';
+const newMessage = message.split(' ').join('-').toLowerCase();
+console.log(newMessage);
+const arrayLength = message.split(' ').length;
+console.log(arrayLength);
