@@ -97,3 +97,34 @@ console.log(findSmallerNumber([5,'-13',-7,-11,'a'])); */
 // }
 // console.log(check(numbers, numbers2));
 // ................................................................
+
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+// const someArr = [22, 11, 34, 5, 12];
+
+// function sumNeighbors(array) {
+//   const sum = [];
+//   for (let i = 0; i < array.length - 1; i++) {
+//     console.log("first", array[i]);
+//     console.log("second", array[i + 1]);
+//     console.log("---");
+//     sum.push(array[i] + array[i + 1]);
+//   }
+//   return sum;
+// }
+
+// console.log(sumNeighbors(someArr));
+
+// const someArr = [22, 11, 34, 5, 12];
+
+// function sumNeighbors(array) {
+//   const sum = [];
+//   for (let i = 0; i < array.length; i += 2) {
+//     console.log("first", array[i]);
+//     console.log("second", array[i + 1] || 0);
+//     console.log("---");
+//     sum.push(array[i] + (array[i + 1] || 0));
+//   }
+//   return sum;
+// }
+
+// console.log(sumNeighbors(someArr));
