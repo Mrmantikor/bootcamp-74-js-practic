@@ -129,9 +129,6 @@ console.log(findSmallerNumber([5,'-13',-7,-11,'a'])); */
 
 // console.log(sumNeighbors(someArr));
 
-
-
-
 /* 
 TODO: 
 Напишіть функцію calculateAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Додати перевірку, що аргументи це числа.
@@ -151,8 +148,8 @@ console.log(calculateAverage('str', 1 , 2, 3, 4, 5, 6, 7));
 */
 
 // Перевірити, чи містить масив заданий елемент. Якщо містить, видалити його, якщо ні - додати в кінець масиву.
-const wordsArray = ["JavaScript", "HTML", "CSS"];
-const item = "SS";
+// const wordsArray = ["JavaScript", "HTML", "CSS"];
+// const item = "SS";
 
 // function foundElement(array, item) {
 //     let includes = false;
@@ -169,15 +166,70 @@ const item = "SS";
 //     return array;
 // }
 
-function foundElement(array, item) {
-    const index = array.indexOf(item)
-    if (index === -1) {
-        array.push(item)
-    } else {
-        array.splice(index, 1);
-    }
-    return array;
-}
+// function foundElement(array, item) {
+//     const index = array.indexOf(item)
+//     if (index === -1) {
+//         array.push(item)
+//     } else {
+//         array.splice(index, 1);
+//     }
+//     return array;
+// }
 
-console.log(foundElement(wordsArray, item));
+// console.log(foundElement(wordsArray, item));
 
+//відфільтруйте масив щоб були лише унікальні фрукты
+
+// const fruits = [
+//   "🍎",
+//   "🍇",
+//   "🍎",
+//   "🍇",
+//   "🍑",
+//   "🍌",
+//   "🍋",
+//   "🍎",
+//   "🍇",
+//   "🍑",
+//   "🍌",
+//   "🍋",
+//   "🍑",
+//   "🍌",
+//   "🍋",
+// ];
+// function getUnqFtuits(arr) {
+//   const newArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!newArray.includes(arr[i])) {
+//       newArray.push(arr[i]);
+//     }
+//   }
+//   console.log(newArray);
+// }
+// function getUnqFtuits(arr) {
+//   const newArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === arr.indexOf(arr[i])) {
+//       newArray.push(arr[i]);
+//     }
+//   }
+//   console.log(newArray);
+// }
+// getUnqFtuits(fruits);
+
+// Знайти всі елементи масиву, що містять задану підстроку,
+//  та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення
+// "Масив елементів, що містять підстроку substring: ..." Результат повинен бути розділений комами
+// та пробілами.(використати indexOf)
+
+// const wordsArray = ["JavaScript", "HTML", "CSS", "React"];
+// const substring = "S";
+// const newArray = [];
+// for (let word of wordsArray) {
+//   if (word.includes(substring)) {
+//     newArray.push(word);
+//   }
+// }
+// console.log(
+//   `Масив елементів, що містять підстроку ${substring}: ${newArray.join(". ")}`
+// );
