@@ -167,3 +167,6 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 // console.log(evenNumbers);
 // console.log(oddNumbers);
 
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше число в масиві.
+//Додай перевірку що функція отримує масив
