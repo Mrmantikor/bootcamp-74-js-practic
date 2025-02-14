@@ -128,3 +128,24 @@ console.log(findSmallerNumber([5,'-13',-7,-11,'a'])); */
 // }
 
 // console.log(sumNeighbors(someArr));
+
+
+
+
+/* 
+TODO: 
+Напишіть функцію calculateAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Додати перевірку, що аргументи це числа.
+
+function calculateAverage() {
+    
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        if ('number' === typeof arguments[i]) {
+            sum += arguments[i];  count++;
+        }
+    }
+    console.log(sum/count);
+}
+console.log(calculateAverage('str', 1 , 2, 3, 4, 5, 6, 7));
+*/
