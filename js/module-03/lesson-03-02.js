@@ -149,3 +149,35 @@ function calculateAverage() {
 }
 console.log(calculateAverage('str', 1 , 2, 3, 4, 5, 6, 7));
 */
+
+// Перевірити, чи містить масив заданий елемент. Якщо містить, видалити його, якщо ні - додати в кінець масиву.
+const wordsArray = ["JavaScript", "HTML", "CSS"];
+const item = "SS";
+
+// function foundElement(array, item) {
+//     let includes = false;
+//     for (let i = 0; i < array.length; i++) {
+//       console.log(array);
+//         if (array[i] === item) {
+//             array.splice(i, 1);
+//             includes = true;
+//         }
+//   }
+//     if (includes === false) {
+//         array.push(item);
+//     }
+//     return array;
+// }
+
+function foundElement(array, item) {
+    const index = array.indexOf(item)
+    if (index === -1) {
+        array.push(item)
+    } else {
+        array.splice(index, 1);
+    }
+    return array;
+}
+
+console.log(foundElement(wordsArray, item));
+
