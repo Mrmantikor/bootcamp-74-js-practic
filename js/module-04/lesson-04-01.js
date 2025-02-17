@@ -87,7 +87,7 @@
 // }
 
 
-console.log (sum);
+// console.log (sum);
 
 
 
@@ -109,3 +109,30 @@ console.log (sum);
 // Напишіть код для сумування всіх зарплат і
 // збережіть його результат у змінній sum.
 // Якщо об'єкт salaries порожній, то результат має бути 0
+
+// Напишіть функцію, яка приймає як параметр об'єкт
+// та формує об'єкти у новому масиві у форматі [key, value]
+
+const user = {
+  name: 'John',
+  surName: 'Stones',
+  age: 20,
+  hobby: 'tenis',
+  haveCar: true,
+  merried: false,
+};
+const getArray = function (obj) {
+
+    const newArray = [];
+    const keys = Object.keys(obj);
+    
+
+    for (const key of keys) {
+        newArray.push({[key]: obj[key] });
+
+    }
+    return newArray;
+}
+
+
+console.log(getArray(user));
