@@ -44,8 +44,8 @@
  * - remove(productName)
  * - clear()
  * - countTotalPrice()
- * - increaseQuantity(productName)
- * - decreaseQuantity(productName)
+ * - increaseQuantity(product)
+ * - decreaseQuantity(product)
  *
  * { name: '🍎', price: 50 }
  * { name: '🍇', price: 70 }
@@ -71,31 +71,59 @@ const cart = {
 
     },
     remove(productName){
-        
-        for (let i=0; i < this.items.length; i++){
-           
-            const item = this.items[i];
+        let newArray = [];
 
-            if (productName === item.name){
-                if (item.quantity === 1){
-                    this.items.splice(i, 1);
-                } else item.quantity -= 1;
+        for (const item of this.items){
+            if (item.name !== productName){
+                newArray.push(item);
             }
         }
-        // const arr = [];
+        this.items = newArray;
+        // for (let i=0; i < this.items.length; i++){
+        //
+        //     const item = this.items[i];
+        //
+        //     if (productName === item.name){
+        //         if (item.quantity === 1){
+        //             this.items.splice(i, 1);
+        //         } else item.quantity -= 1;
+        //     }
+        // }
 
-        // for (let item of this.items){
-        //     if (item.name === productName){
-        //         item.quantity -= 1;
-        //         if (item.quantity > 0){
-        //             arr.push(item);
-        //         }
-
-        //     }  else arr.push(item);
-        // }  
-        // this.items = arr;
 
 
+    },
+
+    clear(){
+        this.items = [];
+    },
+    countTotalPrice(){
+        let sum = 0;
+        for (const item of this.items){
+            sum += item.price * item.quantity;
+        }
+        return sum;
+    },
+    increaseQuantity(productName){
+        for (const item of this.items){
+            if (productName === item.name){
+                item.quantity++
+            }
+        }
+    },
+    decreaseQuantity(productName){
+        const arr = [];
+
+        for (let item of this.items){
+            if (item.name === productName){
+                item.quantity -= 1;
+                if (item.quantity > 0){
+                    arr.push(item);
+                }
+
+            }  else arr.push(item);
+        }
+        this.items = arr;
     }
   }
 
@@ -106,7 +134,11 @@ const cart = {
   cart.add({  name: '🍎', price: 50 });
   cart.add({ name: '🍇', price: 70 });
   cart.remove('🍇');
-  cart.remove('🍇');
-  cart.remove('🍇');
+  // cart.clear();
+cart.increaseQuantity('🍎');
+cart.decreaseQuantity('🍎');
+cart.decreaseQuantity('🍎');
+cart.decreaseQuantity('🍎');
+console.log(cart.countTotalPrice());
   console.table(cart.getItems());
   
