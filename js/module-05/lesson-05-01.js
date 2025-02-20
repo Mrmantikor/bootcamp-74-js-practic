@@ -145,3 +145,35 @@ const findLetterWithO = (string) => string.toLowerCase().startsWith('o');
 console.log(firstElement(words, findLetterWithO));
 /*console.log(firstElement(numbers, findNumber));
 console.log(firstElement(words, findLetterWithO));*/
+
+// { name: '🍎', price: 50 }
+//  { name: '🍇', price: 70 }
+//  * { name: '🍋', price: 60 }
+//  * { name: '🍓', price: 110 }
+
+// const numbers = [1, 3, 6, 7, 9, 20];
+
+// const arr = numbers.map(el => {
+//   if (el % 2 !== 0){
+//     return el*=2;
+//   } return el;
+// }) 
+// console.log(arr);
+
+// const numbers = [1, 3, 6, 7, 9, 20];
+
+// const arr = numbers.map(el => el % 2 !== 0 ? el*2 : el) 
+// console.log(arr);
+
+// const products = [
+//   { name: '🍎', price: 50 },
+//   { name: '🍇', price: 70 },
+//   { name: '🍋', price: 60 },
+//   { name: '🍓', price: 110 }
+// ];
+
+// const productsWithDiscount = products.map((el, indx) => {
+//   const disc = (indx + 1)*10;
+//   return {...el, discount: `${disc}%`, price: (el.price - (el.price / disc)).toFixed(2)};
+// });
+// console.log(productsWithDiscount);
