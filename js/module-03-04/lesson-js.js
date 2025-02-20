@@ -100,3 +100,140 @@
 // };
 
 // console.log(findTopStudent(students));
+
+
+const people = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+];
+//нарцис  'Jhon'
+
+const people2 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: [],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+const people3 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса
+
+const people4 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: ['Eva'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+//Нарциса знають всі, нарцис незнає нікого
+
+// function findNar(array) {
+//     let narzis = "";
+//     for (const user of array) {
+//         if (user.know.length === 0) {
+//             narzis += user.name;
+//             break;
+//         }
+//     }
+//     if (!narzis) {
+//         return `немає нарциса`;
+//     }
+//     for (const whoKnow of array) {
+//         if (whoKnow.name === narzis) {
+//             continue;
+//         }
+//         if (!whoKnow.know.includes(narzis)) {
+//             return `немає нарциса`
+//         }
+//     }
+//     return `Нарицис ${narzis}`
+// }
+
+// console.log(findNar(people4));
+
+
+// Напишіть функцію "findBooksByAuthor",
+//яка буде повертати масив книг відповідного автора.
+
+
+const books = [
+  { title: 'Війна і мир', author: 'Лев Толстой', year: 1869 },
+  {
+    title: 'Преступление и наказание',
+    author: 'Федор Достоевский',
+    year: 1866,
+  },
+  {
+    title: 'Гаррі Поттер і філософський камінь',
+    author: 'Джоан Роулінг',
+    year: 1997,
+  },
+  { title: 'Мастер и Маргарита', author: 'Михаил Булгаков', year: 1967 },
+  { title: '1984', author: 'Джордж Оруелл', year: 1949 },
+];
+
+function findBooksByAuthor(books, author) {
+    const booksArray = [];
+    for (const book of books) {
+        if (book.author === author) {
+            booksArray.push(book);
+        }
+    }
+    return booksArray;
+}
+console.log(findBooksByAuthor(books, "Лев Толстой"));
