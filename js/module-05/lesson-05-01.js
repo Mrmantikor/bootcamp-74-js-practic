@@ -50,3 +50,43 @@ const multiplyCallbeck = (number) => {
 
 multiplyNumbers(10, 3, multiplyCallbeck);
 */
+//Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентифікатор як id і викликає callback
+//Передаючи йому створений об'єкт.
+//showProduct(product) - коллбек приймаючий об'єкт
+//продукту і логірующий їх у консоль
+// const makeProduct = (name, price, callback) => {
+//   const id = Date.now();
+//   const product = {
+//     name,
+//     price,
+//     id,
+//   };
+//   callback(product);
+// };
+// const showProduct = (product) => {
+//   console.log(product);
+// };
+// makeProduct("Mango", 29, showProduct);
+
+//Напишіть функцію each(array, callback), яка
+//першим параметром приймає масив, а другим - функцію,
+//Яка застосовується до кожного елементу масиву.
+//Функція each повинна повернути новий масив, елементами
+//якого будуть результати виклику callback
+//callback функції повинна множити елементи на 2
+//! Використай анонімну колбєк функцію
+
+// const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
+// const each = (array, callback) => {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(callback(array[i]));
+//   }
+//   return newArray;
+// };
+// const result = each(numbers, (number) => number * 2);
+// console.log(result);
