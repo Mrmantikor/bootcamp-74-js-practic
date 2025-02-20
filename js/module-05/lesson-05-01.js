@@ -90,3 +90,58 @@ multiplyNumbers(10, 3, multiplyCallbeck);
 // };
 // const result = each(numbers, (number) => number * 2);
 // console.log(result);
+
+/*const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
+let sum = 0;
+numbers.forEach((el, indx, array) => {
+  
+  if(el %2 === 0) {
+    return;
+  }
+  sum += el;
+})
+console.log(sum);*/
+// Напишіть функцію, яка приймає масив і колбек-функцію. Функція повинна повернути перший елемент масиву,
+//який задовольняє умову, визначену в колбек - функції. Якщо такого елементу немає, функція
+// повинна повернути null. Також необхідно написати 2 різні колбеки. При використанні першого колбеку має
+// повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
+// "O" у будь - якому реєстрі.
+
+/*const numbers = [1, 3, 6, 7, 9, 20];
+
+const firstElement = (arrayFirst, callback) =>{
+  for(let i = 0; i<= arrayFirst.length; i++){
+    if(callback(arrayFirst[i]) === true){
+      return arrayFirst[i];
+    };
+  }
+  return null;
+};
+
+const findNumber = (number) =>{
+  if(number %2 === 0 ){
+    return true;
+  }else false;
+};
+
+console.log(firstElement(numbers, findNumber));*/
+
+//const numbers = [1, 3, 6, 7, 9, 20];
+/*const words = ['apple', 'banana', 'orange', 'pear'];
+
+const firstElement = (arrayFirst, callback) =>{
+  for(let i = 0; i<= arrayFirst.length; i++){
+    if(callback(arrayFirst[i])){
+      return arrayFirst[i];
+    };
+  }
+  return null;
+};
+
+const findNumber = (number) => number % 2 === 0;
+
+const findLetterWithO = (string) => string.toLowerCase().startsWith('o');
+
+console.log(firstElement(words, findLetterWithO));
+/*console.log(firstElement(numbers, findNumber));
+console.log(firstElement(words, findLetterWithO));*/
