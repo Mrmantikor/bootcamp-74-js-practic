@@ -113,8 +113,35 @@ const getAvailableCarNames = (cars, amountThreshold) => {
 console.table(getAvailableCarNames(vehicles, 12));
 */
 
-const getAvailableCarNames = (cars, amountThreshold) => {
-  return cars.reduce((acc, el) => (el.amount > amountThreshold ? [...acc, el.model] : acc), []);
-};
+// const getAvailableCarNames = (cars, amountThreshold) => {
+//   return cars.reduce((acc, el) => (el.amount > amountThreshold ? [...acc, el.model] : acc), []);
+// };
 
-console.table(getAvailableCarNames(vehicles, 12));
+// console.table(getAvailableCarNames(vehicles, 12));
+
+//2.Отримати машини на розпродажі і сортувати за спаданням ціни
+
+// const getSortedCarsOnSale = cars => {
+//   return cars.filter(item => item.onSale).toSorted((a, b) => b.price - a.price);
+// };
+
+// console.table(getSortedCarsOnSale(vehicles));
+
+// const repeatCars = cars => {
+//   return cars.reduce((acc, elem) => {
+//     if (acc[elem.model]) {
+//       acc[elem.model] += 1;
+//     } else {
+//       acc[elem.model] = 1;
+//     }
+//     return acc;
+//   }, {});
+// };
+
+// const repeatCars = cars => {
+//   return cars.reduce(
+//     (acc, elem) => ({ ...acc, [elem.model]: acc[elem.model] ? acc[elem.model] + 1 : 1 }),
+//     {}
+//   );
+// };
+// console.log(repeatCars(vehicles));
