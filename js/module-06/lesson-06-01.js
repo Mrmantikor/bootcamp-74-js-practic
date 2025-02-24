@@ -114,36 +114,100 @@
 // ---------------------------------------------
 /*
 ? Це ladder (сходи) – об'єкт, який дозволяє підніматися вгору та спускатися:
+// */
+
+// const ladder = {
+//   step: 0,
+
+//   up() {
+//     this.step += 1;
+//     return this;
+//   },
+
+//   down() {
+//     this.step -= 1;
+//     return this;
+//   },
+
+//   showStep() {
+//     console.log(this.step);
+//     return this;
+//   },
+// };
+
+// // ladder.up();
+// // ladder.up();
+// // ladder.up();
+
+// // ladder.showStep();
+
+// // ladder.down();
+
+// // ladder.showStep();
+
+// //Змініть код методів up, down і showStep таким чином, щоб їх виклик можна було зробити ланцюжком, наприклад так:
+// ladder.up().up().up().down().down().showStep().up().up().showStep();
+/*
+
+? Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю, розраховує
+? та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю з властивості stones.
 */
+//
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stone) {
+//     const findStone = this.stones.find(item => item.name === stone);
+//     if (!findStone) return 'Stone not found';
+//     return findStone.price * findStone.quantity;
+//   },
+// };
 
-const ladder = {
-  step: 0,
+// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+// console.log(chopShop.calcTotalPrice('fh'));
+/*
+? Створіть об'єкт calculator із трьома методами:
+?
+? read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
+? add() - повертає суму збережених значень.
+? mult() - перемножує збережені значення та повертає результат.
+*/
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   add() {
+//     return this.a + this.b;
+//   },
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
+// calculator.read(3, 4);
+// console.log(calculator.add());
+// console.log(calculator.mult());
+// console.log(calculator);
 
-  up() {
-    this.step += 1;
-    return this;
+const calculator = {
+  read(numbers) {
+    this.numbers = numbers;
   },
-
-  down() {
-    this.step -= 1;
-    return this;
+  add() {
+    return this.numbers.reduce((acc, num) => acc + num, 0);
   },
-
-  showStep() {
-    console.log(this.step);
-    return this;
+  mult() {
+    return this.numbers.reduce((acc, num) => acc * num, 1);
   },
 };
-
-// ladder.up();
-// ladder.up();
-// ladder.up();
-
-// ladder.showStep();
-
-// ladder.down();
-
-// ladder.showStep();
-
-//Змініть код методів up, down і showStep таким чином, щоб їх виклик можна було зробити ланцюжком, наприклад так:
-ladder.up().up().up().down().down().showStep().up().up().showStep();
+calculator.read([3, 4]);
+console.log(calculator.add());
+console.log(calculator.mult());
+console.log(calculator);
