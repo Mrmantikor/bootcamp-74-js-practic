@@ -101,7 +101,6 @@
 
 // console.log(findTopStudent(students));
 
-
 const people = [
   {
     name: 'Alex',
@@ -180,7 +179,7 @@ const people4 = [
   },
 ];
 //немає нарциса'
- //Нарциса знають всі, нарцис незнає нікого
+//Нарциса знають всі, нарцис незнає нікого
 
 // function findNar(array) {
 //     let narzis = "";
@@ -205,35 +204,3 @@ const people4 = [
 // }
 
 // console.log(findNar(people4));
-
-
-// Напишіть функцію "findBooksByAuthor",
-//яка буде повертати масив книг відповідного автора.
-
-
-const books = [
-  { title: 'Війна і мир', author: 'Лев Толстой', year: 1869 },
-  {
-    title: 'Преступление и наказание',
-    author: 'Федор Достоевский',
-    year: 1866,
-  },
-  {
-    title: 'Гаррі Поттер і філософський камінь',
-    author: 'Джоан Роулінг',
-    year: 1997,
-  },
-  { title: 'Мастер и Маргарита', author: 'Михаил Булгаков', year: 1967 },
-  { title: '1984', author: 'Джордж Оруелл', year: 1949 },
-];
-
-function findBooksByAuthor(books, author) {
-    const booksArray = [];
-    for (const book of books) {
-        if (book.author === author) {
-            booksArray.push(book);
-        }
-    }
-    return booksArray;
-}
-console.log(findBooksByAuthor(books, "Лев Толстой"));
