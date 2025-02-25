@@ -145,3 +145,4 @@ console.table(getAvailableCarNames(vehicles, 12));
 //   );
 // };
 // console.log(repeatCars(vehicles));
+//
