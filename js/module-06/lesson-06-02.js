@@ -124,36 +124,75 @@
 ? Оголоси приватні властивості #login та #email, доступ до яких зроби через геттер та сеттер login та email.
 */
 
-class User {
-  #login;
-  #email;
-  constructor({ login, email }) {
-    this.#login = login;
-    this.#email = email;
-  }
-  get login() {
-    return this.#login;
-  }
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
-  get email() {
-    return this.#email;
-  }
-  set email(newEmail) {
-    if (this.#checkEmail(newEmail)) {
-      this.#email = newEmail;
-    } else {
-      console.log(`Your email is incorect`);
+// class User {
+//   #login;
+//   #email;
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     if (this.#checkEmail(newEmail)) {
+//       this.#email = newEmail;
+//     } else {
+//       console.log(`Your email is incorect`);
+//     }
+//   }
+//   #checkEmail(newEmail) {
+//     return newEmail.endsWith('@gmail.com') && newEmail.length > 13;
+//   }
+  
+// }
+
+// const mango = new User({ login: 'mango', email: 'mango@gmail.com' });
+
+// mango.email = 'poly@gmail.com';
+// console.log(mango.email);
+
+/**
+ * Напиши клас Notes який управляє колекцією нотаток у властивості items.
+ * Нотатка - це об'єкт із властивостями text і priority.
+ * Додай класу статичний метод Priopity, який буде повертати об'єкт із пріоритетами.
+ * Додай методи
+ * - addNote(note),
+ * - removeNote(text)
+ * - updatePriority(text, newPriority)
+ */
+class Notes{
+  static Priority(){
+    return {
+      LOW: 'low',
+      HIGHT: 'hight',
     }
   }
-  #checkEmail(newEmail) {
-    return newEmail.endsWith('@gmail.com') && newEmail.length > 13;
+  constructor(){
+    this.items = [];
   }
-  
+  addNote(note){
+    this.items.push(note);
+  }
+  removeNote(text){
+    this.items = this.items.filter(el => (el.text !== text));
+  }
+  updatePriority(text, newPriority){
+    this.items = this.items.map(el => el.text === text ? {...el, priority: newPriority} : el)
+  }
 }
 
-const mango = new User({ login: 'mango', email: 'mango@gmail.com' });
+const note = new Notes();
+note.addNote({text: 'Hello', priority: Notes.Priority().LOW })
+note.addNote({text: 'Hi', priority: Notes.Priority().HIGHT })
+note.addNote({text: 'Good day', priority: Notes.Priority().LOW })
+note.removeNote('Hi');
+note.updatePriority('Hello', Notes.Priority().HIGHT)
 
-mango.email = 'poly@gmail.com';
-console.log(mango.email);
+console.log(note);
