@@ -208,55 +208,144 @@
 Один пост це об'єкт з полями text, data, head, id
 */
 
-class Blogger {
-  #topics;
-  constructor({ email, age, numbeOfPosts, topics = [] }) {
-    this.email = email;
-    this.age = age;
-    this.numbeOfPosts = numbeOfPosts;
-    this.#topics = topics;
-  }
-  getInfo() {
-    console.log(
-      `Blogger ${this.email} is ${this.age} years old and has ${this.numbeOfPosts} posts.`
-    );
-  }
-  updatePostCount(value) {
-    this.numbeOfPosts += value;
-  }
-  createPost(post) {
-    this.#topics.push(post);
-  }
-  get topics() {
-    return this.#topics;
-  }
-  getTopicById(id) {
-    return this.#topics.find(topic => topic.id === id);
-  }
-  topicUpdate(newTopic) {
-    if (!newTopic.id) return;
-    this.#topics = this.#topics.map(topic =>
-      topic.id === newTopic.id ? { ...topic, ...newTopic } : topic
-    );
-  }
-  removeTopic(id) {
-    this.#topics = this.#topics.filter(topic => topic.id !== id);
-  }
-}
-const newBlogger = new Blogger({
-  email: 'blog@gmail.com',
-  age: 23,
-  numbeOfPosts: 45,
-});
-newBlogger.getInfo();
-newBlogger.updatePostCount(4);
+// class Blogger {
+//   #topics;
+//   constructor({ email, age, numbeOfPosts, topics = [] }) {
+//     this.email = email;
+//     this.age = age;
+//     this.numbeOfPosts = numbeOfPosts;
+//     this.#topics = topics;
+//   }
+//   getInfo() {
+//     console.log(
+//       `Blogger ${this.email} is ${this.age} years old and has ${this.numbeOfPosts} posts.`
+//     );
+//   }
+//   updatePostCount(value) {
+//     this.numbeOfPosts += value;
+//   }
+//   createPost(post) {
+//     this.#topics.push(post);
+//   }
+//   get topics() {
+//     return this.#topics;
+//   }
+//   getTopicById(id) {
+//     return this.#topics.find(topic => topic.id === id);
+//   }
+//   topicUpdate(newTopic) {
+//     if (!newTopic.id) return;
+//     this.#topics = this.#topics.map(topic =>
+//       topic.id === newTopic.id ? { ...topic, ...newTopic } : topic
+//     );
+//   }
+//   removeTopic(id) {
+//     this.#topics = this.#topics.filter(topic => topic.id !== id);
+//   }
+// }
+// const newBlogger = new Blogger({
+//   email: 'blog@gmail.com',
+//   age: 23,
+//   numbeOfPosts: 45,
+// });
+// newBlogger.getInfo();
+// newBlogger.updatePostCount(4);
 
-newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Sport', id: 1 });
-newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Life', id: 3 });
-newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Food', id: 4 });
+// newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Sport', id: 1 });
+// newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Life', id: 3 });
+// newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Food', id: 4 });
+// // console.log(newBlogger);
+// // console.log(newBlogger.topics);
+// console.log(newBlogger.getTopicById(3));
+// console.log(newBlogger.topicUpdate({ id: 1, text: 'jhfkjsg' }));
+// newBlogger.removeTopic(1);
 // console.log(newBlogger);
-// console.log(newBlogger.topics);
-console.log(newBlogger.getTopicById(3));
-console.log(newBlogger.topicUpdate({ id: 1, text: 'jhfkjsg' }));
-newBlogger.removeTopic(1);
-console.log(newBlogger);
+
+
+//? Завдання полягає у створенні програми, що дозволяє керувати замовленнями в ресторані.
+
+// #### Для цього потрібно реалізувати клас `Order`, який містить такі приватні властивості:
+// - `tableNumber` - номер столика, де зроблено замовлення
+// - `items` - масив предметів замовлення, де кожен предмет містить ім'я (name) та ціну (price)
+// - `isPaid` - позначає, чи оплачене замовлення (default = false)
+// ##### Для класу Order потрібно реалізувати такі методи:
+// - `calculateTotal`() - повертає загальну суму замовлення.
+// - `markAsPaid`() - позначає замовлення як оплачене
+// - `addItem`() - який додає предмет замовлення до масиву "items"
+// - `removeItem`() - який видаляє предмет замовленя з масиву "items"
+// ##### Додатково можна створити гетери та сетери для отримання номера столика, статусу замовлення та самого замовлення
+// #### Також потрібно створити клас `MenuItem`, який містить властивості `name` та `price` для предметів замовлення
+
+// class Order {
+//   #tableNumber;
+//   #items;
+//   #isPaid;
+
+//   constructor(tableNumber, items = [], isPaid = false) {
+//     this.#items = items;
+//     this.#tableNumber = tableNumber;
+//     this.#isPaid = isPaid;
+//   }
+
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+
+//   get items() {
+//     return this.#items;
+//   }
+
+//   calculateTotal() {
+//     // let totalPrice = 0;
+//     // this.#items.forEach(el => totalPrice += el.price);
+//     // return totalPrice;
+
+//     return this.#items.reduce((acc, el) => acc + el.price, 0);
+//   }
+
+//   markAsPaid() {
+//     if (!this.#isPaid) {
+//       this.#isPaid = true;
+//     }
+//     console.log("Paid sucssesfull");
+//   }
+
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter(el => el.id !== itemToRemove);
+//   }
+
+//   get tableNumber() {
+//     return this.#tableNumber;
+//   }
+
+//   getItemById(id) {
+//     return this.#items.find(el => el.id === id);
+//   }
+//   get isPaid() {
+//     return this.#isPaid;
+//   }
+// }
+
+
+// class MenuItem {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//     this.id = Date.now();
+//   }
+// }
+
+// const order1 = new Order(1);
+// const item1 = new MenuItem('chicken', 200);
+// const item2 = new MenuItem('cow', 400);
+// const item3 = new MenuItem('chicken', 100);
+
+// order1.addItem(item1);
+// order1.addItem(item2);
+// order1.addItem(item3);
+// console.log(order1.calculateTotal());
+// order1.markAsPaid();
+// order1.removeItem(3);
+// console.table(order1.items);
+// console.log(order1.getItemById(2));
+// console.log(order1.isPaid);
