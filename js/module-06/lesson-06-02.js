@@ -86,7 +86,6 @@
 //   .add(20)
 //   .getResult();
 
-
 /*
 ? Напиши клас Storage, який створює об'єкти для управління складом товарів.
 ? При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
@@ -113,11 +112,9 @@
 
 // const stor1 = new Storage(['🍎', '🍋', '🍇', '🍑']);
 
-
 // stor1.addItem('🍌');
 // stor1.removeItem('🍋');
 // console.log(stor1.getItems());;
-
 
 /*
 ? Напиши клас User який створює об'єкт із властивостями login та email.
@@ -150,7 +147,7 @@
 //   #checkEmail(newEmail) {
 //     return newEmail.endsWith('@gmail.com') && newEmail.length > 13;
 //   }
-  
+
 // }
 
 // const mango = new User({ login: 'mango', email: 'mango@gmail.com' });
@@ -167,32 +164,99 @@
  * - removeNote(text)
  * - updatePriority(text, newPriority)
  */
-class Notes{
-  static Priority(){
-    return {
-      LOW: 'low',
-      HIGHT: 'hight',
-    }
+// class Notes{
+//   static priorityriority(){
+//     return {
+//       LOW: 'low',
+//       HIGHT: 'hight',
+//     }
+//   }
+//   constructor(){
+//     this.items = [];
+//   }
+//   addNote(note){
+//     this.items.push(note);
+//   }
+//   removeNote(text){
+//     this.items = this.items.filter(el => (el.text !== text));
+//   }
+//   updatePriority(text, newPriority){
+//     this.items = this.items.map(el => el.text === text ? {...el, priority: newPriority} : el)
+//   }
+// }
+
+// const note = new Notes();
+// note.addNote({text: 'Hello', priority: Notes.priority().LOW })
+// note.addNote({text: 'Hi', priority: Notes.priority().HIGHT })
+// note.addNote({text: 'Good day', priority: Notes.priority().LOW })
+// note.removeNote('Hi');
+// note.updatePriority('Hello', Notes.priority().HIGHT)
+
+// console.log(note);
+
+/*
+? Напиши клас Blogger для створення об'єкта блогера з наступними властивостями:
+? email - email
+? age - вік, число
+? numberOfPosts - кількість постів, число
+? topics - масив тем на яких спеціалізується блогер
+? Клас чекає один параметр - об'єкт налаштувань з однойменними властивостями.
+? Добав метод getInfo(),який, повертає рядок: Blogger ${email} is ${вік} years old and has ${кількість постів} posts.
+? Додай метод updatePostCount(value), який у параметрі value приймає кількість постів, які п
+отрібно додати користувачеві.
+? Додай можливість додавати, видаляти, змінювати пости блогера. 
+Один пост це об'єкт з полями text, data, head, id
+*/
+
+class Blogger {
+  #topics;
+  constructor({ email, age, numbeOfPosts, topics = [] }) {
+    this.email = email;
+    this.age = age;
+    this.numbeOfPosts = numbeOfPosts;
+    this.#topics = topics;
   }
-  constructor(){
-    this.items = [];
+  getInfo() {
+    console.log(
+      `Blogger ${this.email} is ${this.age} years old and has ${this.numbeOfPosts} posts.`
+    );
   }
-  addNote(note){
-    this.items.push(note);
+  updatePostCount(value) {
+    this.numbeOfPosts += value;
   }
-  removeNote(text){
-    this.items = this.items.filter(el => (el.text !== text));
+  createPost(post) {
+    this.#topics.push(post);
   }
-  updatePriority(text, newPriority){
-    this.items = this.items.map(el => el.text === text ? {...el, priority: newPriority} : el)
+  get topics() {
+    return this.#topics;
+  }
+  getTopicById(id) {
+    return this.#topics.find(topic => topic.id === id);
+  }
+  topicUpdate(newTopic) {
+    if (!newTopic.id) return;
+    this.#topics = this.#topics.map(topic =>
+      topic.id === newTopic.id ? { ...topic, ...newTopic } : topic
+    );
+  }
+  removeTopic(id) {
+    this.#topics = this.#topics.filter(topic => topic.id !== id);
   }
 }
+const newBlogger = new Blogger({
+  email: 'blog@gmail.com',
+  age: 23,
+  numbeOfPosts: 45,
+});
+newBlogger.getInfo();
+newBlogger.updatePostCount(4);
 
-const note = new Notes();
-note.addNote({text: 'Hello', priority: Notes.Priority().LOW })
-note.addNote({text: 'Hi', priority: Notes.Priority().HIGHT })
-note.addNote({text: 'Good day', priority: Notes.Priority().LOW })
-note.removeNote('Hi');
-note.updatePriority('Hello', Notes.Priority().HIGHT)
-
-console.log(note);
+newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Sport', id: 1 });
+newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Life', id: 3 });
+newBlogger.createPost({ text: 'dhgfdjsfguew', data: '12.02.2025', head: 'Food', id: 4 });
+// console.log(newBlogger);
+// console.log(newBlogger.topics);
+console.log(newBlogger.getTopicById(3));
+console.log(newBlogger.topicUpdate({ id: 1, text: 'jhfkjsg' }));
+newBlogger.removeTopic(1);
+console.log(newBlogger);
