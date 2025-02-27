@@ -75,3 +75,63 @@
 //     </li>`;
 // refs.list.insertAdjacentHTML('beforeend', superNewLi);
 // refs.list.innerHTML = '';
+
+/**
+ * Вам надано кілька масивів з різними фруктами (назва у масиві вказує на те, куди потрібно помістити елементи відносно ul).
+ * `Створи` html - елемент списку і `додай` його у розмітку.Попрактикуйся з методами`append`, `prepend`, `after`, `before`
+ * заповнивши ними список елементами з масивів.Для зручності створи допоміжну функцію`elementsOfIngridients`,
+ * яка повертатиме масив елементів(масив з лішками).
+ */
+// const appendFruitList = ['apple🍎', 'banana🍌'];
+// const prependFruitList = ['grapes🍇', 'orange🍊'];
+// const beforeFruitList = ['strawberry🍓', 'cherry🍒'];
+// const afterFruitList = ['peach🍑', 'kiwi🥝'];
+//
+// const createMarkup = (array) =>{
+//    return array.map(el => {
+//         const li = document.createElement('li')
+//         li.textContent = (el)
+//         return li
+//     })
+//
+// }
+const list = document.querySelector('.film-list')
+//
+// const list1 = createMarkup(appendFruitList)
+// const list2 = createMarkup(prependFruitList)
+// const list3 = createMarkup(beforeFruitList)
+// const list4 = createMarkup(afterFruitList)
+//
+// list.append(...list1)
+// list.prepend(...list2)
+// list.before(...list3)
+// list.after(...list4)
+// console.log(list1)
+
+// 3. Вставте даний текст в html документ, а потім виділіть усі слова, які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
+
+// const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
+//
+// "".split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
+// const words = text.split(/\s+/)
+
+// const textEl = document.createElement('p')
+//
+// words.forEach(word => {
+//     if(word.length > 8){
+//        const span= document.createElement('span')
+//         span.textContent = (word + ' ')
+//         span.style.backgroundColor = "yellow"
+//         textEl.appendChild(span)
+//     }else {
+//         textEl.innerHTML = textEl.innerHTML + word + ' '
+//     }
+// })
+//
+// list.after(textEl)
+
+// const textEl = words.map(word => {
+//     return word.length>8 ? `<span style="background:yellow"> ${word} </span>` : word
+// }).join(' ')
+//
+// list.innerHTML = (textEl)
