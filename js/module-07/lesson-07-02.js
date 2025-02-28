@@ -22,7 +22,7 @@
 //   form: document.querySelector('.js-contact-form'),
 //   userName: document.querySelector('.js-username-output'),
 // };
-
+//
 // const hadleInputValidation = function () {
 //   // refs.userName.textContent = refs.input.value ? refs.input.value : 'Anonimous';
 //   refs.userName.textContent = refs.input.value || 'Anonimous';
