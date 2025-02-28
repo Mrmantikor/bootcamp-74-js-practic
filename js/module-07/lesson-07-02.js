@@ -157,24 +157,48 @@
 // =============================================================
 
 //При натисканні на кола вони змінюють колір.
-function getRandomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+// function getRandomColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
 
-const refs = {
-  outerCircle: document.querySelector('.outer-circle'),
-  innerCircle: document.querySelector('.inner-circle'),
-};
+// const refs = {
+//   outerCircle: document.querySelector('.outer-circle'),
+//   innerCircle: document.querySelector('.inner-circle'),
+// };
+
+// // refs.outerCircle.addEventListener('click', e => {
+// //   e.target.style.backgroundColor = getRandomColor();
+// // });
 
 // refs.outerCircle.addEventListener('click', e => {
+//   if (e.target === e.currentTarget) {
+//     e.target.style.borderColor = getRandomColor();
+//     return;
+//   }
+
 //   e.target.style.backgroundColor = getRandomColor();
 // });
 
-refs.outerCircle.addEventListener('click', e => {
-  if (e.target === e.currentTarget) {
-    e.target.style.borderColor = getRandomColor();
-    return;
-  }
+// Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
-  e.target.style.backgroundColor = getRandomColor();
-});
+const refs = {
+  list: document.querySelector('.film-list'),
+};
+
+const box = document.createElement('div');
+const arrayList = [];
+box.classList.add('numberContainer');
+for (let i = 0; i <= 100; i += 1){
+  const boxL = document.createElement('div');
+  boxL.classList.add('number');
+  boxL.textContent = randomNumber();
+  if (boxL.textContent % 2 === 0) {
+    boxL.classList.add('even')
+  } else {
+    boxL.classList.add('odd');
+  }
+  arrayList.push(boxL);
+}
+box.append(...arrayList);
+refs.list.after(box);
