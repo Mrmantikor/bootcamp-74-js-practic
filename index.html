@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./css/index.css">
-  <title>Document</title>
-</head>
+  <body>
+    <h1>Bootcamp 74</h1>
 
-<body>
-  <h1>Bootcamp 74</h1>
-  <h1 id="title">Базові операції з DOM</h1>
-  <ul class="list">
-    <li data-topic="navigation">
-      <h3>Навігація по DOM</h3>
-      <p>
-        Доступ до DOM починається з об'єкта document, з нього можна дістатися
-        до будь-яких елементів.
-      </p>
-    </li>
-    <li data-topic="search">
-      <h3>Пошук елементів</h3>
-      <p>
-        Група методів elem.querySelector* - це сучасний стандарт для пошуку
-        елементів.
-      </p>
-    </li>
-    <li data-topic="props">
-      <h3 class="completed">Властивості та атрибути</h3>
-      <p>
-        elem.textContent, elem.classList, elem.style, elem.hasAttribute(name),
-        elem.getAttribute(name), elem.setAttribute(name, value),
-        elem.removeAttribute(name)
-      </p>
-    </li>
-    <li data-topic="manipulation">
-      <h3>Створення та видалення елементів</h3>
-      <p>
-        DOM API дозволяє не тільки вибирати або змінювати вже існуючі, але й
-        видаляти, а також створювати нові елементи, після чого додавати їх в
-        документ.
-      </p>
-    </li>
-  </ul>
+    <!-- Task - 01 -->
+    <p class="task-title">Task 1</p>
+    <form class="contact-form js-contact-form">
+      <input
+        name="userName"
+        type="text"
+        class="contact-form-input js-username-input"
+        data-length="8"
+        placeholder="Your name"
+      />
+      <label class="js-policy-label">
+        <input type="checkbox" name="accept" class="contact-form-checkbox js-policy-checkbox" />
+        Я <span class="js-username-output">Anonymous</span> погоджуюсь із політикою конфіденційності
+      </label>
+      <button type="submit" class="contact-form-btn js-contact-form-submit">Відправити</button>
+    </form>
 
-  <ul class="film-list"></ul>
-  <!-- <script src="./js/module-01/lesson-1-1.js"></script> -->
-  <!-- <script src="./js/module-01/lesson-1-2.js" type="module"></script>
+    <!-- Task - 02 -->
+    <!-- <p class="task-title">Task 2</p>
+    <div class="input-container">
+      <input class="js-password-input" type="text" name="password" />
+      <button class="js-password-button">Приховати</button> -->
+    <!-- </div> -->
+
+    <!-- Task - 03 -->
+    <!-- <p class="task-title">Task 3</p>
+    <div class="eventThumb"></div> -->
+
+    <!-- Task - 04 -->
+    <!-- <p class="task-title">Task 4</p>
+    <div>
+      <div class="box"></div>
+      <button class="js-decrease" id="decrease">Зменьшити</button>
+      <button class="js-increase" id="increase">Збільшити</button>
+    </div> -->
+
+    <!-- Task - 05 -->
+    <!-- <p class="task-title">Task 5</p>
+    <div>
+      <div class="outer-circle">
+        <div class="inner-circle"></div>
+      </div>
+    </div> -->
+    <!-- <h1 id="title">Базові операції з DOM</h1>
+    <ul class="list">
+      <li data-topic="navigation">
+        <h3>Навігація по DOM</h3>
+        <p>
+          Доступ до DOM починається з об'єкта document, з нього можна дістатися до будь-яких
+          елементів.
+        </p>
+      </li>
+      <li data-topic="search">
+        <h3>Пошук елементів</h3>
+        <p>Група методів elem.querySelector* - це сучасний стандарт для пошуку елементів.</p>
+      </li>
+      <li data-topic="props">
+        <h3 class="completed">Властивості та атрибути</h3>
+        <p>
+          elem.textContent, elem.classList, elem.style, elem.hasAttribute(name),
+          elem.getAttribute(name), elem.setAttribute(name, value), elem.removeAttribute(name)
+        </p>
+      </li>
+      <li data-topic="manipulation">
+        <h3>Створення та видалення елементів</h3>
+        <p>
+          DOM API дозволяє не тільки вибирати або змінювати вже існуючі, але й видаляти, а також
+          створювати нові елементи, після чого додавати їх в документ.
+        </p>
+      </li>
+    </ul> -->
+
+    <!-- <ul class="film-list"></ul> -->
+    <!-- <script src="./js/module-01/lesson-1-1.js"></script> -->
+    <!-- <script src="./js/module-01/lesson-1-2.js" type="module"></script>
     <script src="./js/module-02/lesson-1-1.js" type="module"></script>
     <script src="./js/module-02/lesson-2-2.js" type="module"></script> -->
-  <!-- <script src="./js/module-01-02/lesson-1.js" type="module"></script> -->
-  <!-- <script src="./js/module-03/lesson-03-02.js" type="module"></script>
+    <!-- <script src="./js/module-01-02/lesson-1.js" type="module"></script> -->
+    <!-- <script src="./js/module-03/lesson-03-02.js" type="module"></script>
   <script src="./js/module-04/lesson-04-01.js" type="module"></script> -->
-  <!-- <script src="./js/module-04/lesson-04-02.js"></script> -->
-  <!-- <script src="./js/module-03-04/lesson-js.js" type="module"></script> -->
-  <!-- <script src="./js/module-05/lesson-05-01.js" type="module"></script>
+    <!-- <script src="./js/module-04/lesson-04-02.js"></script> -->
+    <!-- <script src="./js/module-03-04/lesson-js.js" type="module"></script> -->
+    <!-- <script src="./js/module-05/lesson-05-01.js" type="module"></script>
     <script src="./js/module-05/lesson-05-02.js" type="module"></script> -->
-  <!-- <script src="./js/q-a/script.js" type="module"></script> -->
-  <!-- <script src="./js/module-06/lesson-06-01.js" type="module"></script> -->
-  <!-- <script src="./js/module-06/lesson-06-02.js" type="module"></script> -->
-  <script src="./js/module-07/lesson-07-01.js" type="module"></script>
-</body>
-
+    <!-- <script src="./js/q-a/script.js" type="module"></script> -->
+    <!-- <script src="./js/module-06/lesson-06-01.js" type="module"></script> -->
+    <!-- <script src="./js/module-06/lesson-06-02.js" type="module"></script> -->
+    <script src="./js/module-07/lesson-07-02.js" type="module"></script>
+  </body>
 </html>
